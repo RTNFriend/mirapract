@@ -1,0 +1,9 @@
+MIDlet-1: MiraField,/StatiAndKinematic/MiraFieldIcon.png,StatiAndKinematic.MiraField
+MIDlet-Info-URL: www.mirapract.com
+MIDlet-Jar-Size: 94748
+MIDlet-Jar-URL: MiraField1_1.jar
+MIDlet-Name: MiraField
+MIDlet-Vendor: Mirapract
+MIDlet-Version: 1.1
+MicroEdition-Configuration: CLDC-1.1
+MicroEdition-Profile: MIDP-2.0

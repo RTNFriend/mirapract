@@ -1,0 +1,153 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Point of Beginning Message Board - Messages View</TITLE>
+<META content="text/html; charset=windows-1251" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 8.00.6001.18975"></HEAD>
+<BODY link=#6a2e22 bgColor=#ffffff><A name=top></A><FONT size=2 
+face="Verdana, Arial, Sans-Serif"><A name=185006></A><B><FONT color=#004156>Do 
+It Yourself GPS</FONT></B><BR><I>Posted By <B><A 
+href="http://www.i-boards.com/bnp/pob/profile.asp?UserID=327">Brian 
+Kirby</A></B> on <FONT color=#6f732d>2/15/2003 at 12:55 AM</FONT></I><BR><BR>A 
+few threads back was an topic on making your own carrier phase GPS units. I do 
+not survey for a living, but I use precision GPS units for timing purposes. 
+Several of the units I have used have carrier phase capability. The units I have 
+used that do offer carrier phase are discontinued Motorola Oncore VPs and 
+Rockwell Jupiter OEM receiver boards.<BR><BR>To use the Motorola unit as an 
+example. The OEM board is a 8 channel L1 unit. It cost about $270 when it was 
+available (they are still available as used and refurb). They run off of 5 volt 
+power, so if you want to use any other power, they need a voltage regulator 
+circuit. I have designed my units to run off of 12 volts. The parts for a common 
+7805T regulator should run under $5. They also need a signal level converter, so 
+you computer can talk to it. The unit uses TTL and the computer requires RS232. 
+You can use a common MAX232 chipset to do this and with required parts, it 
+should be under $10. You will need a rugged metal case to withstand some abuse 
+and to afford some RF shielding. Plan on $15 to $50 depending on the ruggedness 
+you desire. You will also need some miscellaneous items, such as a power switch, 
+an I/O connector, a couple of LEDs for power and 1PPS indicators. Say another 
+$25. And a I/O cable that will supply power and a computer connection. Say $15. 
+An antenna cable and a battery for the receiver.<BR><BR>Then if you plan to make 
+measurements, you need a geodetic L1 antenna. $700 and up.<BR>You can build your 
+own antenna and I have built 4 home made choke ring antennas, but I found that I 
+could not get the antennas centered, so they were under 1 cm, when the 
+measurements where taken against NGS benchmarks. And tripods cost and so 
+on.<BR><BR>You will need a portable computer to log data with. You will need a 
+software package that will post process the data. The only package I found for 
+my receivers are GrafNet/GrafNav and the full blown package that will do float, 
+static, and RTK is $5,000.<BR><BR>In my case, I need to know my position within 
+16 cm. Positions outside of this box start to contribute to timing errors. The 
+Oncores were fully capable of resolving under 2 cm lat/long and 5 cm vertical 
+using the adjustment software and the equipment I had. We measured the new 
+target base station antenna against three NGS benchmarks. Data was recorded for 
+45 minutes the first time and three additional receivers were used with the 
+timing base station. We waited a couple of days and a different time and 
+recorded data again, but we went for 4 hours the second time. We recorded a 
+third set of data for 4 hours. <BR><BR>The Oncore’s would probably do a lot 
+better if I had geodetic antennas. The Motorola Oncore VP units when used for 
+timing, provide a timing reference of 30 nanoseconds within UTC. I no longer use 
+these units, they have been replaced by the Motorola Oncore M12+, a receiver 
+than was optimized for precision timing. The end result in my case and 
+application is I can provide a timing reference within 4 nanoseconds of UTC and 
+this system is traceable back to NIST for frequency calibration.<BR><BR>In my 
+case, I estimate that I spent close to $8,000 in the GPS system to get this 
+capability. So throw in a little profit for the vendors and that will tell you 
+were the cost is going. Throw in L2 capability, which you guys really need the 
+most, etc, and there will be more cost. And remember, you get what you pay for 
+in the long run with a good vendor.<BR><BR><BR><BR><BR><BR><BR><BR>
+<HR color=#000000 SIZE=1>
+<A name=185008></A><B><FONT color=#004156>Re: Do It Yourself 
+GPS</FONT></B><BR><I>Posted By <B><A 
+href="http://www.i-boards.com/bnp/pob/profile.asp?UserID=2396">Paul 
+Holley</A></B> on <FONT color=#6f732d>2/15/2003 at 1:07 
+AM</FONT></I><BR><BR>Like tech support?<BR>PNH<BR><BR><BR>
+<HR color=#000000 SIZE=1>
+<A name=185014></A><B><FONT color=#004156>Re: Do It Yourself 
+GPS</FONT></B><BR><I>Posted By <B><A 
+href="http://www.i-boards.com/bnp/pob/profile.asp?UserID=2257">John 
+Stratton</A></B> on <FONT color=#6f732d>2/15/2003 at 1:32 
+AM</FONT></I><BR><BR>Brian<BR>That has got to be one of the best "why they cost 
+what they do" posts for a long time.<BR>Thanks for that, very 
+informative.<BR><BR><BR>
+<HR color=#000000 SIZE=1>
+<A name=185049></A><B><FONT color=#004156>Re:BRIAN</FONT></B><BR><I>Posted By 
+<B><A href="http://www.i-boards.com/bnp/pob/profile.asp?UserID=4531">John 
+Francis</A></B> on <FONT color=#6f732d>2/15/2003 at 9:44 
+AM</FONT></I><BR><BR>After subtracting the $5000 for software(there's free L1 
+software available and someone with GPS already has software that will work with 
+Rinex) and about $670 for the antenna(good surveying grade antennas available 
+for $30), then subtracting, say about $1500 for "profit", your down to about 
+$850 for a "home brew" unit, and I think that price should actually be 
+considerably lower.<BR><BR>I can also tell you that aside from the software, the 
+circuit boards, in no way are "high ticket items". If you look at the 
+manufacturers, you'll see these boards at pretty descent prices that are already 
+setup for power in, antenna and data out. And the specs go with the times(the 
+timing gets better and better), because no progressive company wants to continue 
+manufacturing "old technology", even if the old technology would still 
+suffice.<BR><BR>ASIDE FROM ALL THIS TALK ABOUT COST, I don't understand why more 
+surveyors aren't "dreamers" or "techies" when it comes to GPS. <BR><BR>I would 
+like to try some experiments . . . just to do it.<BR><BR><BR>
+<HR color=#000000 SIZE=1>
+<A name=185057></A><B><FONT color=#004156>Dreaming....</FONT></B><BR><I>Posted 
+By <B><A href="http://www.i-boards.com/bnp/pob/profile.asp?UserID=111">Scott 
+Partridge</A></B> on <FONT color=#6f732d>2/15/2003 at 9:56 
+AM</FONT></I><BR><BR>As I have said before, I'm all for innovation. <BR><BR>I 
+admire John Francis for his gumption and enthusiasm.<BR><BR>But if one of our 
+competitors wants to devote time, energy, and money to "dream up" a home made 
+set of receivers while I "dream up" new and profitable applications for clients 
+using our store bought stuff, that's fine by me. Our store bought stuff was paid 
+for a long time ago with a budget in place for maintenance, support and 
+upgrades. <BR><BR>John is right, though. It helps to be a dreamer with technical 
+skills. <BR><BR><FONT size=1><I>Modified By <B><A 
+href="http://www.i-boards.com/bnp/pob/profile.asp?UserID=111&amp;ModifiedbyAdmin=False">Scott 
+Partridge</A></B> on <FONT color=#6f732d>2/15/2003 at 10:04 
+AM</FONT></FONT></I><BR><BR>
+<HR color=#000000 SIZE=1>
+<A 
+href="http://www.i-boards.com/bnp/pob/postMessage.asp?ThreadID=18719&amp;CategoryID=-1" 
+target=THREADS>Post a reply to this thread</A> 
+<P> 
+<P> 
+<P> 
+<P> 
+<P> 
+<P> 
+<P> 
+<P> 
+<P> 
+<P> 
+<P> 
+<P> 
+<P> 
+<P> 
+<P> 
+<P> 
+<P> 
+<P> 
+<P> 
+<P> 
+<P> 
+<P> 
+<P> 
+<P> 
+<P> 
+<P> 
+<P>&nbsp; </FONT>
+<SCRIPT type=text/javascript src="thePost_files/urchin.js">
+</SCRIPT>
+
+<SCRIPT type=text/javascript>
+_uacct = "UA-1770110-10";
+urchinTracker();
+</SCRIPT>
+<!-- START Nielsen//NetRatings SiteCensus V5.3 --><!-- COPYRIGHT 2007 Nielsen//NetRatings -->
+<SCRIPT type=text/javascript>
+ var _rsCI="us-bpaww";
+ var _rsCG="0";
+ var _rsDN="//secure-us.imrworldwide.com/";
+ var _rsPLfl=0;
+ var _rsSE=1;
+ var _rsSM=1.0;
+ var _rsCL=1;
+</SCRIPT>
+
+<SCRIPT type=text/javascript src=""></SCRIPT>
+<NOSCRIPT>
+<DIV><IMG alt="" src="thePost_files/m.gif"></DIV></NOSCRIPT><!-- END Nielsen//NetRatings SiteCensus V5.3 --></BODY></HTML>

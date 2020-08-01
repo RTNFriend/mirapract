@@ -1,0 +1,857 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en"><head>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>Development history</title>
+
+<meta name="description" content="A story about how I build gps receiver at home">
+<meta name="keywords" content="GPS,GNSS,RINEX, RINEX &#1082;&#1086;&#1085;&#1074;&#1077;&#1088;&#1090;&#1077;&#1088;">
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script src="pictureEnlarger.js" type="text/javascript"></script>
+<script src="openHTMLinPopUpWIndow.js" type="text/javascript"></script></head>
+<body>
+<script type="text/javascript">var page="about";</script>
+<script src="headerLangBarAndNavBar.js" type="text/javascript"> </script>
+<table style="width: 650px; text-align: left; margin-left: auto; margin-right: auto;" id="textTables" border="0" cellpadding="3" cellspacing="2">
+<tbody>
+<tr>
+<td colspan="2" rowspan="1" style="vertical-align: top; text-align: right;"><br>
+</td>
+</tr>
+<tr>
+<td style="text-align: justify; vertical-align: top;" colspan="2" rowspan="1">My name is Yuriy, I am a
+surveyor. I started to develop my own gps receiver because of <span style="cursor: pointer; color: blue;" onclick="openHTMLinPopUpWin('thePost.htm')" title="open in new window">this post</span>,
+which I encountered accidentally on a surveyors message board. As
+you will see this post inspired me a lot :). Partly because I got sick
+and
+tired of winter surveying in Alberta, partly because it seemed like
+easy
+to built your own gps at low cost and it looked like a good hobby.<br>
+<br>
+This has been my hobby for last 7 years, and it turned out not to
+be so easy to develop the system and not cheap either. Every summer,
+during system development, I was dreaming about fall to come, the time
+I was moving to Canada for work. Now walking in deep snow, cutting
+trees
+down the boundary lines was a good thing because I did not have to
+torture myself with the system development.<br>
+<br>
+Eventually I build 14 receivers and the only thing left do to is to
+certify the units and register a company or become a sole proprietor.<br>
+<br>
+It is strange that for some reason I do not care if this
+hobby&nbsp;materializes as business. The
+only thing that brings me peace of mind is that I am done with it.
+After
+all surveying is more enjoyable lifestyle than sitting at home
+soldering wires, casting plastic enclosures, staring at the pc screen
+all the time.<br>
+<br>
+Bellow is the entire story from the very beginning:<br>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+<center>
+<ul id="itemOutline">
+<li><a name="gps_and_pc"></a>gps and pc</li>
+</ul>
+</center>
+<br>
+<br>
+<table style="width: 650px; text-align: left; margin-left: auto; margin-right: auto;" id="textTables" border="0" cellpadding="3" cellspacing="2">
+<tbody>
+<tr>
+<td style="text-align: justify; vertical-align: top;" colspan="2" rowspan="1">I purchased an oem gps
+module,
+voltage regulator, signal level converter, as it was specified in the
+message and started to experiment. I had no knowledge in electronics so
+I started from scratch. Most of the information about how electronics
+components work I took from data sheets, wikipedia and google.
+Eventually I connected the module to a pc and when I saw first several
+lines of binary messages on terminal screen I thought I achieved
+something extraordinary :), for me that was quite a step.<br>
+</td>
+</tr>
+<tr>
+<td style="text-align: center;"><img onclick="openWin('pictures/picture1.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture1" src="pictures/picture1.JPG" title="click to zoom in"></td>
+<td style="text-align: center;"><img onclick="openWin('pictures/picture2.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture2" src="pictures/picture2.JPG" title="click to zoom in"></td>
+</tr>
+<tr>
+<td style="text-align: justify; vertical-align: top;">oem
+board (left) transceiver with caps and DB9 connector (right)
+</td>
+<td style="text-align: justify; vertical-align: top;">All
+in a metallic box<br>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+<center>
+<ul id="itemOutline">
+<li><a name="data_collection_and_rinex"></a>data
+collection and rinex</li>
+</ul>
+</center>
+<center>
+<br>
+<br>
+<table style="width: 650px; text-align: left; margin-left: auto; margin-right: auto;" id="textTables" border="0" cellpadding="3" cellspacing="2">
+<tbody>
+<tr>
+<td style="text-align: justify; vertical-align: top;" colspan="2" rowspan="1">My
+next step was to write a program that would control gps, show info
+about tracked satellites, and write data to hard disk. After that I had
+to write a program that would generate&nbsp;RINEX files from the
+data
+stored on disk. After I spent entire summer learning&nbsp;C++
+programming and serial communications I developed a data collection
+program and RINEX converter. Parsing binary files and forming RINEX
+files turned out to be a very laborious task. I spent a lot of time
+studying GPS interface manual before I decoded ephemeris. Eventually a
+had a system that I could survey with:<br>
+<br>
+</td>
+</tr>
+<tr>
+<td style="text-align: center;"><img onclick="openWin('pictures/picture3.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture3" src="pictures/picture3.JPG" title="click to zoom in"></td>
+<td style="text-align: center;"><img onclick="openWin('pictures/picture4.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture4" src="pictures/picture4.JPG" title="click to zoom in"></td>
+</tr>
+<tr>
+<td style="text-align: justify; vertical-align: top;">data
+collection program</td>
+<td style="text-align: justify; vertical-align: top;"><br>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+<center>
+<ul id="itemOutline">
+<li><a name="building_my_own_system"></a>building
+my own system</li>
+</ul>
+</center>
+<br>
+<br>
+<table style="width: 650px; text-align: left; margin-left: auto; margin-right: auto;" id="textTables" border="0" cellpadding="3" cellspacing="2">
+<tbody>
+<tr>
+<td style="text-align: justify; vertical-align: top;" colspan="2" rowspan="1">In
+order to get rid of a laptop, which was part of my system, I had to
+build a compact circuit that would control gps, write data to a memory
+card,&nbsp;signal system status with LEDs, monitor batteries charge
+level etc. I found out about microcontrollers, purchased a development
+kit and a compiler and started to learn this new
+world.&nbsp;I&nbsp;added to my system a chip that monitors
+batteries
+charge level, checks
+power button, signal level converter, signal lines switch chip etc.
+When I
+build my first prototype on a card board and it worked that was quite a
+feeling:) <br>
+<br>
+Turning a cardboard into a pcb was not easy either.
+Found program called eagle, learned how to use it, designed PCBs,
+eventually
+generated gerber files, sent them the to the factory and in a few weeks
+received my
+PCBs with components soldered. Because of my numerous errors each
+version did not work properly. Every year I was developing a new
+version. Only third version works fine.<br>
+</td>
+</tr>
+<tr>
+<td align="center"><img onclick="openWin('pictures/picture5.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture5" src="pictures/picture5.JPG" title="click to zoom in"></td>
+<td align="center"><img onclick="openWin('pictures/picture6.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture6" src="pictures/picture6.JPG" title="click to zoom in"></td>
+</tr>
+<tr>
+<td style="text-align: justify; vertical-align: top;">1.
+Development kit</td>
+<td style="text-align: justify; vertical-align: top;">2.
+First cardboard prototype, no laptop is needed<br>
+<br>
+</td>
+</tr>
+<tr>
+<td align="center"><img onclick="openWin('pictures/picture7.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture7" src="pictures/picture7.JPG" title="click to zoom in"></td>
+<td align="center"><img onclick="openWin('pictures/picture8.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture8" src="pictures/picture8.JPG" title="click to zoom in"></td>
+</tr>
+<tr>
+<td style="text-align: justify; vertical-align: top;">3.
+First pcb version, (top two boards)</td>
+<td style="text-align: justify; vertical-align: top;">4.
+Second version<br>
+<br>
+</td>
+</tr>
+<tr>
+<td align="center"><img onclick="openWin('pictures/picture33.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture33.JPG" src="pictures/picture33.JPG" vtitle="click to zoom in"><br>
+</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: justify; vertical-align: top;">5.
+Third version, all on one board</td>
+<td style="text-align: justify; vertical-align: top;"><br>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+<center>
+<ul id="itemOutline">
+<li><a name="plastic_enclosure"></a>plastic
+enclosure</li>
+</ul>
+</center>
+<br>
+<br>
+<table style="width: 650px; text-align: left; margin-left: auto; margin-right: auto;" id="textTables" border="0" cellpadding="3" cellspacing="2">
+<tbody>
+<tr>
+<td style="text-align: justify; vertical-align: top;" colspan="2" rowspan="1">Now I wanted to make a nice
+plastic enclosure. So first I had to design it. I learned
+3d commands and drafted pcbs then 6 batteries underneath, and than
+wrapped everything with ellipsoid shaped surface. It took
+me&nbsp;1.5
+month.<br>
+<br>
+Now I had to materialize this enclosure in real world. I was going
+to cut the model in thin layers, print each layer on a plastic sheet,
+cut each sheet along printed lines and clue cutouts together building
+up real enclosure - that was my crazy idea. But I was lucky to find out
+that 3d printers exist :). That was quite a discovery for me. I found
+several vendors, sent them my files and received a few quotes. Ordered
+and in a few weeks I received my materialized parts. That was cool
+to hold in your hands what was only in you dream a short time ago.<br>
+<br>
+Now I had to make a mold and cast copies of my parts. For this I build
+a
+vacuum and pressure chambers, purchased&nbsp;liquid plastic and
+rubber&nbsp;from smooth-on and started. It took 6 month to learn
+mold maling and casting and cast 35
+enclosures<br>
+</td>
+</tr>
+<tr>
+<td align="center"><img onclick="openWin('pictures/picture9.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture9" src="pictures/picture9.jpg" title="click to zoom in"></td>
+<td align="center"><img onclick="openWin('pictures/picture10.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture10" src="pictures/picture10.jpg" title="click to zoom in"></td>
+</tr>
+<tr>
+<td style="vertical-align: top; text-align: left;">1.
+Learning<a class="ex1" href="http://en.wikipedia.org/wiki/Unified_Thread_Standard" target="_blank" title="open in new window">thread
+fundamentals</a> and drafting&nbsp;took 2 weeks</td>
+<td style="text-align: justify; vertical-align: top;">2.
+CAD model sent to the vendor</td>
+</tr>
+<tr>
+<td align="center"><img onclick="openWin('pictures/picture11.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture11" src="pictures/picture11.JPG" title="click to zoom in"></td>
+<td align="center"><img onclick="openWin('pictures/picture12.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture12" src="pictures/picture12.JPG" title="click to zoom in"></td>
+</tr>
+<tr>
+<td style="text-align: justify; vertical-align: top;">3.
+Parts received from the vendor, cost me 800$</td>
+<td style="text-align: justify; vertical-align: top;">4.
+The company sanded off more plastic than was needed while finishing. I
+was fixing this by myself for like 20 days. Was not very happy</td>
+</tr>
+<tr>
+<td align="center"><img onclick="openWin('pictures/picture13.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture13" src="pictures/picture13.JPG" title="click to zoom in"></td>
+<td align="center"><img onclick="openWin('pictures/picture13a.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture13a" src="pictures/picture13a.JPG" title="click to zoom in"></td>
+</tr>
+<tr>
+<td style="text-align: justify; vertical-align: top;">5.
+Same story with these edges</td>
+<td style="text-align: justify; vertical-align: top;">6.
+Attaching&nbsp;holders for battery clips</td>
+</tr>
+<tr>
+<td align="center"><img onclick="openWin('pictures/picture14.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture14.jpg" src="pictures/picture14.jpg" title="click to zoom in"></td>
+<td align="center"><img onclick="openWin('pictures/picture15.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture15.jpg" src="pictures/picture15.jpg" title="click to zoom in"></td>
+</tr>
+<tr>
+<td style="text-align: justify; vertical-align: top;">7.
+Converted paint pot into&nbsp;pressure&nbsp;chamber&nbsp;</td>
+<td style="text-align: justify; vertical-align: top;">8.
+Home made vacuum chamber&nbsp;</td>
+</tr>
+<tr>
+<td align="center"><img onclick="openWin('pictures/picture16.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture16.jpg" src="pictures/picture16.jpg" title="click to zoom in"></td>
+<td align="center"><img onclick="openWin('pictures/picture17.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture17.JPG" src="pictures/picture17.JPG" title="click to zoom in"></td>
+</tr>
+<tr>
+<td style="text-align: justify; vertical-align: top;">9.
+Making mold for a part.</td>
+<td style="vertical-align: top; text-align: left;">10.
+External wall shifts up, clay is removed and second half of the
+mold&nbsp; is poured</td>
+</tr>
+<tr>
+<td align="center"><img onclick="openWin('pictures/picture18.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture18.JPG" src="pictures/picture18.JPG" title="click to zoom in"></td>
+<td align="center"><img onclick="openWin('pictures/picture19.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture19.jpg" src="pictures/picture19.jpg" title="click to zoom in"></td>
+</tr>
+<tr>
+<td style="text-align: justify; vertical-align: top;">11.
+Making vents</td>
+<td style="text-align: justify; vertical-align: top;">12.
+Plastic injection</td>
+</tr>
+<tr>
+<td align="center"><img onclick="openWin('pictures/picture20.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture20" src="pictures/picture20.jpg" title="click to zoom in"></td>
+<td align="center"><img onclick="openWin('pictures/picture21.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture21" src="pictures/picture21.jpg" title="click to zoom in"></td>
+</tr>
+<tr>
+<td style="text-align: justify; vertical-align: top;">13.Removing
+the part</td>
+<td style="text-align: justify; vertical-align: top;">14.
+Almost ready</td>
+</tr>
+<tr>
+<td align="center"><img onclick="openWin('pictures/picture22.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture22.JPG" src="pictures/picture22.JPG" title="click to zoom in"></td>
+<td align="center"><img onclick="openWin('pictures/picture23.JPG')" style="cursor: pointer; width: 315px; height: 237px;" alt="picture23.JPG" src="pictures/picture23.JPG" title="click to zoom in"></td>
+</tr>
+<tr>
+<td style="vertical-align: top; text-align: left;">15.
+I tried this bugger 12 times before I got it fault free</td>
+<td style="text-align: justify; vertical-align: top;">16.
+The end of six month story</td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+<center>
+<ul id="itemOutline">
+<li><a name="antenna"></a>antenna</li>
+</ul>
+</center>
+<br>
+<br>
+<table style="width: 650px; text-align: left; margin-left: auto; margin-right: auto;" id="textTables" border="0" cellpadding="3" cellspacing="2">
+<tbody>
+<tr>
+<td style="text-align: justify; vertical-align: top;" colspan="2" rowspan="1">I
+did not want to depend on the antenna manufacturer so decided to build
+it by myself, just one more crazy idea :). Started from
+here&nbsp;www.antenna-theory.com since I did not know anything
+about
+antennas.
+Decided to
+build a patch antenna because they are made in similar way the PCBs
+are made, so I could order them at the same factory.<br>
+<br>
+Tried 4
+probe patch antenna but realized that the EM field of the antenna was
+affecting a hybrids bellow it, a device that makes 90 degrees delay in
+phase, which I was designing by myself as well. To keep hybrids intact
+I needed 14mm spacing bellow the antenna. Did not have enough room in
+the enclosure to place hybrids this way so
+build a single probe gps antenna. Right Hand Circular Polarization
+in such antennas is achieved by adding a slot in the radiator located
+at 45 egrees to the
+probe.<br>
+<br>
+The best horizontal phase center stability is achieved by
+using 4 probes (Trimble zephyr) or a spiral array (Novatel Pinwheel).
+Antenna&nbsp;took me 5 month to learn design and build.</td>
+</tr>
+<tr>
+<td style="text-align: center; vertical-align: bottom;"><img onclick="openWin('pictures/picture24.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture24.JPG" src="pictures/picture24.JPG" title="click to zoom in"></td>
+<td align="center"><img onclick="openWin('pictures/picture35.JPG')" style="cursor: pointer; width: 315px; height: 237px;" alt="picture35.JPG" src="pictures/picture35.JPG" title="click to zoom in"></td>
+</tr>
+<tr>
+<td style="vertical-align: top; text-align: left;"><a class="ex1" href="http://www.isola-group.com" target="_blank" title="open in new window">Isola</a>granted
+me 2 sheets of high frequency &nbsp;laminate</td>
+<td style="vertical-align: top; text-align: left;">Modeling
+the antenna, added second slot and that improved axial ration of the
+antenna a lot<br>
+</td>
+</tr>
+<tr>
+<td align="center"><img onclick="openWin('pictures/picture36.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture36.JPG" src="pictures/picture36.JPG" title="click to zoom in"></td>
+<td align="center"><img onclick="openWin('pictures/picture37.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture37.JPG" src="pictures/picture37.JPG" title="click to zoom in"></td>
+</tr>
+<tr>
+<td style="text-align: justify; vertical-align: top;">Materialized
+antennas</td>
+<td style="text-align: justify; vertical-align: top;">Soldered
+coax cables</td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+<center>
+<ul id="itemOutline">
+<li><a name="membrane_switch"></a>membrane
+switch</li>
+</ul>
+</center>
+<br>
+<br>
+<table style="width: 650px; text-align: left; margin-left: auto; margin-right: auto;" id="textTables" border="0" cellpadding="3" cellspacing="2">
+<tbody>
+<tr>
+<td style="text-align: justify; vertical-align: top;" colspan="2" rowspan="1">Seems like easy but not at
+all, again spent lots of time designing the switch and lots of money
+for making it.<br>
+<br>
+When a vendor sent me switches the layers did not stick together bellow
+LEDs because my design did not leave enough room. Manufacturer
+agreed to fix it by cluing but the clue spoiled the graphic layer on 20
+switches so only 30 look relatively good. These 50 switches cost me
+1500
+US$ (which is a good price though, 30$ per switch). Design&nbsp;is
+very
+important stage, the design errors can not be always fixed !, I learned
+that hard way - from my errors.<br>
+</td>
+</tr>
+<tr>
+<td border="1" style="text-align: center;"><img onclick="openWin('pictures/picture25.JPG')" style="border: 1px solid ; cursor: pointer; width: 315px; height: 236px;" alt="picture25.jpg" src="pictures/picture25.jpg" title="click to zoom in"></td>
+<td align="center"><img onclick="openWin('pictures/picture26.JPG')" style="border: 1px solid ; cursor: pointer; width: 315px; height: 236px;" alt="picture26.jpg" src="pictures/picture26.jpg" title="click to zoom in"></td>
+</tr>
+<tr>
+<td style="vertical-align: top; text-align: left;">My
+schematic and&nbsp;explanations&nbsp;sent to the manufacturer<br>
+</td>
+<td style="text-align: justify; vertical-align: top;">My
+artwork</td>
+</tr>
+<tr>
+<td align="center"><img onclick="openWin('pictures/picture27.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture27.JPG" src="pictures/picture27.JPG" title="click to zoom in"></td>
+<td align="center"><img onclick="openWin('pictures/picture28.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture28.JPG" src="pictures/picture28.JPG" title="click to zoom in"></td>
+</tr>
+<tr>
+<td style="text-align: justify; vertical-align: top;">Materialized
+switches</td>
+<td style="text-align: justify; vertical-align: top;">Lemo
+granted me this socket, water-pressure -dust prof</td>
+</tr>
+</tbody>
+</table>
+<br>
+<center>
+<ul id="itemOutline">
+<li><a name="assembly"></a>assembly</li>
+</ul>
+</center>
+<br>
+<br>
+<table style="width: 650px; text-align: left; margin-left: auto; margin-right: auto;" id="textTables" border="0" cellpadding="3" cellspacing="2">
+<tbody>
+<tr>
+<td style="text-align: justify; vertical-align: top;" colspan="2" rowspan="1">After wires soldered to
+battery clips, bluetooth modules and lemo sockets it takes&nbsp;2
+days to assemble 1 receiver.<br>
+<br>
+</td>
+</tr>
+<tr>
+<td align="center"><img onclick="openWin('pictures/picture60.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture60.JPG" src="pictures/picture60.JPG" title="click to zoom in"></td>
+<td align="center"><img onclick="openWin('pictures/picture61.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture61.JPG" src="pictures/picture61.JPG" title="click to zoom in"></td>
+</tr>
+<tr>
+<td style="text-align: justify; vertical-align: top;">battery
+clips and wires cut for soldering<br>
+</td>
+<td style="text-align: justify; vertical-align: top;"><br>
+</td>
+</tr>
+<tr>
+<td align="center"><img onclick="openWin('pictures/picture62.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture62.JPG" src="pictures/picture62.JPG" title="click to zoom in"><br>
+</td>
+<td align="center"><img onclick="openWin('pictures/picture48.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture48.JPG" src="pictures/picture48.JPG" title="click to zoom in"><br>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top; text-align: left;">programming
+bootloader into my processor, after that my firmware can be
+updated via serial cable, no programmer will be needed</td>
+<td style="text-align: justify; vertical-align: top;"><div style="text-align: left;">left
+to right: main board + mem card board, bluetooth, lemo socket, battery
+termnals, antenna, memory card cable, enclosure<br></div>
+<br>
+</td>
+</tr>
+<tr>
+<td align="center"><img onclick="openWin('pictures/picture49.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture49.JPG" src="pictures/picture49.JPG" title="click to zoom in"></td>
+<td align="center"><img onclick="openWin('pictures/picture51.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture51.JPG" src="pictures/picture51.JPG" title="click to zoom in"></td>
+</tr>
+<tr>
+<td style="text-align: justify; vertical-align: top;"></td>
+<td style="text-align: justify; vertical-align: top;">shrinkwrapping
+wires<br>
+</td>
+</tr>
+<tr>
+<td align="center"><img onclick="openWin('pictures/picture52.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture52.JPG" src="pictures/picture52.JPG" title="click to zoom in"></td>
+<td align="center"><img onclick="openWin('pictures/picture53.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture53.JPG" src="pictures/picture53.JPG" title="click to zoom in"></td>
+</tr>
+<tr>
+<td style="text-align: justify; vertical-align: top;"><br>
+</td>
+<td style="vertical-align: top; text-align: left;">soldering
+bluetooth and lemo socket wires to my pbc<br>
+</td>
+</tr>
+<tr>
+<td align="center"><img onclick="openWin('pictures/picture54.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture54.JPG" src="pictures/picture54.JPG" title="click to zoom in"></td>
+<td align="center"><img onclick="openWin('pictures/picture55.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture55.JPG" src="pictures/picture55.JPG" title="click to zoom in"></td>
+</tr>
+<tr>
+<td style="text-align: justify; vertical-align: top;"></td>
+<td style="vertical-align: top; text-align: left;">checking
+if bootloader works before closing the enclosure<br>
+</td>
+</tr>
+<tr>
+<td align="center"><img onclick="openWin('pictures/picture56.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture56.JPG" src="pictures/picture56.JPG" title="click to zoom in"></td>
+<td align="center"><img onclick="openWin('pictures/picture57.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture57.JPG" src="pictures/picture57.JPG" title="click to zoom in"></td>
+</tr>
+<tr>
+<td style="vertical-align: top; text-align: left;">antenna
+positioned in place, antennas in all receiver are positioned in the
+same direction<br>
+</td>
+<td style="text-align: justify; vertical-align: top;">final
+power check</td>
+</tr>
+</tbody>
+</table>
+<br>
+<center>
+<ul id="itemOutline">
+<li><a name="transportation_case"></a>transportation
+case</li>
+</ul>
+</center>
+<br>
+<br>
+<table style="width: 650px; text-align: left; margin-left: auto; margin-right: auto;" id="textTables" border="0" cellpadding="3" cellspacing="2">
+<tbody>
+<tr>
+<td style="text-align: justify; vertical-align: top;" colspan="2" rowspan="1">As
+there is no better flashlight than maglight, there is no better case
+than pelican :). So I took the appropriate one, than I built a device
+for foam cutting<a class="ex1" href="http://www.ar15.com/forums/t_3_4/292695_.html" target="_blank" title="open in new window">similar to
+this one</a>and in three days finished<br>
+<br>
+</td>
+</tr>
+<tr>
+<td align="center"><img onclick="openWin('pictures/picture38.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture38.JPG" src="pictures/picture38.JPG" title="click to zoom in"></td>
+<td align="center"><img onclick="openWin('pictures/picture39.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture39.JPG" src="pictures/picture39.JPG" title="click to zoom in"></td>
+</tr>
+<tr>
+<td style="text-align: justify; vertical-align: top;">Sells
+like this</td>
+<td style="text-align: justify; vertical-align: top;">Template
+attached<br>
+<br>
+</td>
+</tr>
+<tr>
+<td align="center"><img onclick="openWin('pictures/picture40.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture40.JPG" src="pictures/picture40.JPG" title="click to zoom in"></td>
+<td align="center"><img onclick="openWin('pictures/picture41.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture41.JPG" src="pictures/picture41.JPG" title="click to zoom in"></td>
+</tr>
+</tbody>
+</table>
+<br>
+<center>
+<ul id="itemOutline">
+<li><a name="mirapract_tools_software"></a>mirapract
+tools software</li>
+</ul>
+</center>
+<br>
+<br>
+<table id="textTables" style="text-align: left; width: 650px;" border="0" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="text-align: justify; vertical-align: top;">For
+software
+developnet I use NetBeans IDE + g++(compiller) &nbsp;+ Qt
+(graphical
+user interface), all open source. Uncomparable to Micforoft Visual
+Studio. NetBeans also supports JavaScripts, of course Java itself, and
+even CSS stylings. I
+like this idea of one IDE for many programming languages</td>
+</tr>
+</tbody>
+</table>
+<br>
+<center>
+<ul id="itemOutline">
+<li><a name="antCalibration"></a>2012, antenna
+calibration</li>
+</ul>
+</center>
+<br>
+<br>
+<table id="textTables" style="text-align: left; width: 650px;" border="0" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td colspan="2" rowspan="1">.... It has been
+a while since I wrote
+here, have not been able to find any time for this yet. I just wanted
+to update this page before I start
+developing my own RTK program. In last 1.5
+years I have had my antenna calibrated, wrote a datacollection app for
+java phones and also spent about seven month learning math necessary
+for RTK program development....<br>
+<br>
+so I will start with antenna calibration:<br>
+Any GNSS antenna is not geodetic if it does not have calibration -
+&nbsp;a table which has horizontal and vertical electrical phase
+center offsets in relation to some&nbsp;reference point, (center of
+bottom
+of ant
+mount), same table also has vertical variations of the phase center as
+a function of satellite elevation, from 10° to 90°, with 5° step.<br>
+<br>
+One of the organizations that does antenna calibration is<a class="ex1" target="_blank" href="http://www.ngs.noaa.gov/ANTCAL/">NGS</a>.
+Even dreaming about your home brew antenna being calibrated by such
+company is already naive :). I wrote them a letter describing my
+gps story and to my biggest surprise the organization agreed to
+calibrate my antenna and they also did it for free!. I would like to
+mention names of the people who did the calibration but I do not know
+if it is appropriate. I really appreciate the wonderful
+job&nbsp;they
+have done and this is the best gift I have ever had during the system
+development. I can not imagine something
+like that happen&nbsp;in my&nbsp;country.<br>
+<br>
+So I have&nbsp;chosen 4 receivers, got the antenna RF
+cables out of them and shipped the receivers to USA and sometime in
+February 2012 I got the results.</td>
+</tr>
+<tr>
+<td style="width: 325px; text-align: center; vertical-align: middle;"><img title="open in new window" onclick="openWin('pictures/picture69.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture69.JPG" src="pictures/picture69.JPG"></td>
+<td style="width: 325px; text-align: center;"><img title="open in new window" onclick="openWin('pictures/picture70.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture70.JPG" src="pictures/picture70.JPG"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">On the background
+the receiver has
+lemo connector installed, which I had to remove in order to get the
+antenna RF cable out of the receiver</td>
+<td style="vertical-align: top;">I built special
+adapter cable between MCX connector type and N type</td>
+</tr>
+<tr>
+<td><img title="open in new window" onclick="openWin('pictures/picture71.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture71.JPG" src="pictures/picture71.JPG"></td>
+<td><img title="open in new window" onclick="openWin('pictures/picture72.JPG')" style="cursor: pointer; width: 315px; height: 236px;" alt="picture72.JPG" src="pictures/picture72.JPG"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">Now the antenna
+inside my receiver can be connected to an external GNSS receiver used
+by NGS</td>
+<td style="vertical-align: top;">Everything is ready
+for shipment for calibration, shipped by the cheapest and lowest
+priority mail option by Ukrposhta</td>
+</tr>
+<tr>
+<td colspan="2" rowspan="1"><br><div style="text-align: justify;">
+Bellow is the relative calibration for
+my receiver. The first part&nbsp;contains average values of phase
+center variations from three antennas. In the second part of the table
+there are errors calculated from the average for each variation value. The NGS tolerance is
+1.0mm. Unfortunately for my
+antenna the errors are 1.4mm (marked in red).
+Because of this my antenna is not published on NGS website.
+It is sad, but what can you do..., 0.4 mm out of tolerance. I should
+have centered the antenna better inside the receiver and should have
+positioned it vertically better as well, but I was not fussy enough. In
+the next version of antenna and plastic enclosure I will design better
+antenna holding system, if I ever get to that point.<br></div>
+<br>
+</td>
+</tr>
+<tr>
+<td id="antCalibtation" colspan="2" rowspan="1">MRAN1+NONE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+-1.2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 75.3<br>
+&nbsp;&nbsp;
+0.0&nbsp;&nbsp; 0.4&nbsp;&nbsp; 1.2&nbsp;&nbsp;
+2.3&nbsp;&nbsp;
+3.4&nbsp;&nbsp; 4.4&nbsp;&nbsp; 5.1&nbsp;&nbsp;
+5.5&nbsp;&nbsp;
+5.5&nbsp;&nbsp; 4.9<br>
+&nbsp;&nbsp; 3.9&nbsp;&nbsp; 2.3&nbsp;&nbsp;
+0.3&nbsp; -2.1&nbsp; -4.8&nbsp; -7.7
+-10.6&nbsp;&nbsp; 0.0&nbsp;&nbsp; 0.0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.0<br>
+&nbsp;&nbsp;
+0.0&nbsp;&nbsp; 0.0&nbsp;&nbsp; 0.0&nbsp;&nbsp;
+0.0&nbsp;&nbsp;
+0.0&nbsp;&nbsp; 0.0&nbsp;&nbsp; 0.0&nbsp;&nbsp;
+0.0&nbsp;&nbsp;
+0.0&nbsp;&nbsp; 0.0<br>
+&nbsp;&nbsp; 0.0&nbsp;&nbsp; 0.0&nbsp;&nbsp;
+0.0&nbsp;&nbsp; 0.0&nbsp;&nbsp; 0.0&nbsp;&nbsp;
+0.0&nbsp;&nbsp;
+0.0&nbsp;&nbsp; 0.0&nbsp;&nbsp; 0.0<br>
+<br>
+<br>
+rms -&nbsp; 3&nbsp; measurements<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: red;">1.4</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.7<br>
+&nbsp;&nbsp;
+0.0&nbsp;&nbsp; 0.1&nbsp;&nbsp; 0.2&nbsp;&nbsp;
+0.1&nbsp;&nbsp;
+0.1&nbsp;&nbsp; 0.1&nbsp;&nbsp; 0.2&nbsp;&nbsp;
+0.2&nbsp;&nbsp;
+0.2&nbsp;&nbsp; 0.1<br>
+&nbsp;&nbsp; 0.1&nbsp;&nbsp; 0.2&nbsp;&nbsp;
+0.2&nbsp;&nbsp; 0.3&nbsp;&nbsp; 0.5&nbsp;&nbsp;
+0.8&nbsp;&nbsp;
+<span style="color: red;">1.4</span>&nbsp;&nbsp;
+0.0&nbsp;&nbsp; 0.0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.0<br>
+&nbsp;&nbsp;
+0.0&nbsp;&nbsp; 0.0&nbsp;&nbsp; 0.0&nbsp;&nbsp;
+0.0&nbsp;&nbsp;
+0.0&nbsp;&nbsp; 0.0&nbsp;&nbsp; 0.0&nbsp;&nbsp;
+0.0&nbsp;&nbsp;
+0.0&nbsp;&nbsp; 0.0<br>
+&nbsp;&nbsp; 0.0&nbsp;&nbsp; 0.0&nbsp;&nbsp;
+0.0&nbsp;&nbsp; 0.0&nbsp;&nbsp; 0.0&nbsp;&nbsp;
+0.0&nbsp;&nbsp;
+0.0&nbsp;&nbsp; 0.0&nbsp;&nbsp; 0.0</td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+<center>
+<ul id="itemOutline">
+<li><a name="mirafield"></a>2012, 2013
+MiraField app</li>
+</ul>
+</center>
+<br>
+<br>
+<table id="textTables" style="text-align: left; width: 650px;" border="0" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td colspan="2" rowspan="1"><div style="text-align: justify;">This story is
+more sad than the previous one, because it does not have that big good
+part in it as the previous one :). <br>
+<br>
+In
+spring&nbsp;2012 I spent about two month for developing and testing
+the
+MiraField program, this year I spent a few weeks modifying it. Last year
+I did not do enough tests and I thought there is no problems
+with&nbsp;kinematic methods in open areas. This year I tested it on
+a
+real project and realized the the kinematic is a total disaster. The
+problem is not with MiraField program, there must be a problem with the
+raw data, I think it is with the overflow of cycle counter which jumps
+by&nbsp;1575420 every&nbsp;15 minutes, similar happens to
+preudoranges
+- the counter jumps by one light millisecond. But, on the other hand,
+this is not a big problem since there is no cycle slips, this is just
+counting that starts from a new number - it is easy to fix. <br>
+<br>
+I
+tried to fix those jumps in my Mir&#1072;pract Tools program but I did not
+have any positive results yet, and it might be that&nbsp;I will not
+have
+solution ever. I processed data in Trimble Business Center and
+GNSS Solutions, and in both cases the results are bad. I hope to find
+the problem when I develop my own RTK program, this is described bellow
+in new section.<br>
+<br>
+If you have
+nothing to do and want to play with my kinematic data in some other
+program - the raw data are bellow, and if you could share your results
+with me that would be great :) <br></div>
+<br>
+<a target="_blank" title="open in new window" class="miraLink" href="rawDataSamples/kinematicRawData.zip">kinematicRawData.zip
+(3.7Mb)</a>&nbsp; <br>
+<br>
+Unlike Kinematic, Static method works perfect.</td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+<center>
+<ul id="itemOutline">
+<li><a name="whatIsNext"></a>what is next ?</li>
+</ul>
+</center>
+<br>
+<br>
+<table style="width: 650px; text-align: left; margin-left: auto; margin-right: auto;" id="textTables" border="0" cellpadding="3" cellspacing="2">
+<tbody>
+<tr>
+<td colspan="2" rowspan="1" style="text-align: justify; vertical-align: top;">Last
+summer I was learning math the RTK is based on. After
+I finish this page I start developing my own RTK program for Android
+OS. I plan Network RTK version. I think RTN networks give a big second
+chance for life for
+L1 receivers again, since networks know all of the delays to GNSS
+signal.<br>
+<br>
+If
+the rover is
+standing still than it is relatively easy to resolve ambiguities,
+because
+ambiguities in double differences do not change
+(theoretically) - satellites move, ambiquities do not change -
+this is a beautiful property. I know the equations, so I hope I
+eventually will
+make it to the floating ambiguities, then using LAMBDA method I hope to
+find fixed ambiguities and than by Kalman filtering I will be trying to
+find
+vector components. But&nbsp;this is not really RTK. When the
+receiver
+is not moving, even if the solution takes place in real
+time, and even if initialization happens in, say 20s, this is more
+static in real time to me than RTK, because initialization is not
+valid when the receiver starts moving, initialization has to begin from
+scratch at new point. The book I am learning from describes only this
+type of RTK.<br>
+<br>
+I
+have no idea how to maintain cycle counting when rover is moving from
+one point to another, or how to get initialization itself on the move. <span style="font-style: italic; text-decoration: underline;">On-the-fly</span>
+ambiguity resolution is my&nbsp;very far goal... and this is the
+essence of RTK. How many month or years will it take me to the
+goal&nbsp;I do not know and I do not want to think about sad things
+at
+the beginning of this new adventure.....<br>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+If you want to drop me a few lines this is my address: <a class="ex1" href="mailto:info@mirapract.com">info@mirapract.com</a>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+</center>
+<center>
+<ul id="MyFotter">
+<li>first published: September 2011, last updated: 17 March 2013</li>
+</ul>
+</center>
+</body></html>
